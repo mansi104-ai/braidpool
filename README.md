@@ -105,6 +105,22 @@ A visualization dashboard for the Braidpool decentralized mining pool, and Bitco
 For setup instructions and environment configuration, please see the [Dashboard README](./dashboard/README.md)
 
 
+# Inventory Agent
+
+The Inventory Agent is a standalone FastAPI service for tracking ASIC and CPU
+miners. It can be run directly with Python or through Docker/Docker Compose.
+
+```bash
+# Run with Docker Compose
+docker compose up --build inventory-agent
+
+# Visit API docs
+http://localhost:8000/docs
+```
+
+For Docker build/run commands, environment variables, and endpoint details, see
+[the Inventory Agent docs](./docs/inventory_agent.md).
+
 # Progress
 
 A list with TODO's:

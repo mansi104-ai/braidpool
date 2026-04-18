@@ -20,6 +20,7 @@ simulations/logs/*
 simulations/*.toolbox
 notes/
 venv
+.venv
 *~
 .aider*
 .reviews/

@@ -13,3 +13,15 @@ services:
       - ./dashboard/api/.env
     ports:
     - 5000:5000
+  inventory-agent:
+    build:
+      context: .
+      dockerfile: inventory_agent/Dockerfile
+    image: braidpool/inventory-agent:local
+    container_name: braidpool-inventory-agent
+    environment:
+      INVENTORY_AGENT_SERVICE_NAME: Inventory Agent
+      INVENTORY_AGENT_SEED_EXAMPLES: "true"
+    ports:
+      - "${INVENTORY_AGENT_PORT:-8000}:8000"
+    restart: unless-stopped
